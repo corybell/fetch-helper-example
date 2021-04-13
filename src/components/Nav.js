@@ -76,13 +76,13 @@ const Nav = ({ siteTitle }) => (
       </LogoListItem>
       <Spacer />
       <NavLink to="/" activeClassName="active">
-        Home
+        GET
       </NavLink>
-      <NavLink to="/about/" activeClassName="active">
-        About
+      <NavLink to="/post/" activeClassName="active">
+        POST
       </NavLink>
-      <NavLink to="/contact/" activeClassName="active">
-        Contact
+      <NavLink to="/put/" activeClassName="active">
+        PUT
       </NavLink>
     </Flex>
   </Root>

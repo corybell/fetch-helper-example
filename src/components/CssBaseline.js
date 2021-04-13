@@ -9,7 +9,6 @@ import {
   lineHeight,
   color,
 } from "services/theme"
-import { pageFullHeight } from "services/mixin"
 
 const siteStyles = `
   #___gatsby, 
@@ -18,7 +17,6 @@ const siteStyles = `
     min-height: 100%;
     width: 100%;
     background-color: #eaeaea;
-    padding-bottom: 2rem;
   }
 
   /* HTML elements */
@@ -30,7 +28,8 @@ const siteStyles = `
   }
 
   html, body {
-    ${pageFullHeight}
+    height: auto;
+    min-height: 100%;
     line-height: ${lineHeight.normal};
     font-size: ${fontSize[1]};
     font-family: ${fontFamily.primary};
@@ -175,7 +174,7 @@ const siteStyles = `
 
   table {
     width: 100%;
-    margin-bottom: ${spacing[8]};
+    margin-top: ${spacing[8]};
     border-collapse: collapse;
     border-spacing: 0.25rem;
   }
@@ -183,6 +182,7 @@ const siteStyles = `
   table thead tr th {
     border-bottom: 1px solid ${color.accent};
     text-align: left;
+    font-weight: ${fontWeight.bold}
   }
 
   small {

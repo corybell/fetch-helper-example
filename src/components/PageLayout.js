@@ -15,14 +15,12 @@ const Container = styled.div`
   padding: 1rem ${spacing[8]};
   z-index: 0;
   background-color: #eaeaea;
-  ${pageFullHeight}
+  // ${pageFullHeight}
 `
 
 const Main = styled.main`
   min-height: 50vh;
-  background-color: white;
-  margin-top: 1rem;
-  padding: 1rem;
+  
 `
 
 const Layout = ({ children }) => {

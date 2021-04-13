@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { spacing } from "services/theme"
 
 const Root = styled.footer`
-  margin: ${spacing[16]} 0;
+  margin: ${spacing[8]} 0 ${spacing[16]} 0;
   padding: 0;
 `
 

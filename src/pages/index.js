@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { get } from '@bellistic/fetch-helper'
 import Layout from "components/PageLayout"
 import Helmet from "components/Helmet"
-import { Title } from "components/Core"
+import { Card, Title } from "components/Core"
 
 // https://ghibliapi.herokuapp.com/#tag/Films
 const url = 'https://ghibliapi.herokuapp.com/films?fields=id,title,director,release_date,running_time'
@@ -37,24 +37,29 @@ const IndexPage = () => {
   
   return (
     <Layout>
-      <Helmet title="Home" />
-      <Title>GET Example</Title>
-      <p>
-        This page uses the 'get' function to fetch a list of Studio Ghibli films.
-      </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Director</th>
-            <th>Date</th>
-            <th>Duration</th>
-          </tr>
-        </thead>
-        <tbody>
-          { films.map(f => renderFilm(f)) }
-        </tbody>
-      </table>
+      <Helmet title="GET" />
+      <Card>
+        <span>
+          This page uses the 'get' function to fetch a list of Studio Ghibli films.
+        </span>
+      </Card>
+      <Card>
+        <Title>Studio Ghibli Films</Title>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Director</th>
+              <th>Date</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            { films.map(f => renderFilm(f)) }
+          </tbody>
+        </table>
+      </Card>
+      
     </Layout>
   )
 }

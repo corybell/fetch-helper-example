@@ -3,13 +3,13 @@ import Layout from "components/PageLayout"
 import Helmet from "components/Helmet"
 import { Title } from "components/Core"
 
-const ContactPage = () => {
+const AboutPage = () => {
   return (
     <Layout>
-      <Helmet title="Contact" />
-      <Title>Contact</Title>
+      <Helmet title="POST" />
+      <Title>POST</Title>
     </Layout>
   )
 }
 
-export default ContactPage
+export default AboutPage
