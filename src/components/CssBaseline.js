@@ -172,15 +172,31 @@ const siteStyles = `
   }
 
   table {
+    table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
-    border-spacing: 0.25rem;
   }
 
   table thead tr th {
     border-bottom: 1px solid ${color.accent};
     text-align: left;
     font-weight: ${fontWeight.bold}
+  }
+
+  thead th:nth-child(1) {
+    width: 50%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 20%;
+  }
+
+  th, td {
+    padding: 0.5rem 0;
   }
 
   small {

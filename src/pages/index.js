@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react"
 import { get } from '@bellistic/fetch-helper'
 import Layout from "components/PageLayout"
 import Helmet from "components/Helmet"
-import { Card, Title } from "components/Core"
+import { Card } from "components/Core"
 
 // https://ghibliapi.herokuapp.com/#tag/Films
-const url = 'https://ghibliapi.herokuapp.com/films?fields=id,title,director,release_date,running_time'
+const url = 'https://ghibliapi.herokuapp.com/films?fields=id,title,director,release_date'
 
 const IndexPage = () => {
   const [fetched, setFetched] = useState(false);
@@ -31,10 +31,31 @@ const IndexPage = () => {
       <td>{f.title}</td>
       <td>{f.director}</td>
       <td>{f.release_date}</td>
-      <td>{f.running_time}</td>
     </tr>
   )
   
+  const renderTable = () => {
+    if (!films.length) {
+      return (
+        <div>loading...</div>
+      )
+    }
+    return (
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Release Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          { films.map(f => renderFilm(f)) }
+        </tbody>
+      </table>
+    )
+  }
+
   return (
     <Layout>
       <Helmet title="GET" />
@@ -46,21 +67,8 @@ const IndexPage = () => {
       </Card>
       <Card>
         <h2>Studio Ghibli Films</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Director</th>
-              <th>Date</th>
-              <th>Duration</th>
-            </tr>
-          </thead>
-          <tbody>
-            { films.map(f => renderFilm(f)) }
-          </tbody>
-        </table>
+        { renderTable() }
       </Card>
-      
     </Layout>
   )
 }
