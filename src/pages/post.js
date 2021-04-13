@@ -1,15 +1,17 @@
 import React from "react"
 import Layout from "components/PageLayout"
 import Helmet from "components/Helmet"
-import { Title } from "components/Core"
+import { Card } from "components/Core"
 
-const AboutPage = () => {
+const PostPage = () => {
   return (
     <Layout>
       <Helmet title="POST" />
-      <Title>POST</Title>
+      <Card>
+        <h1>POST</h1>
+      </Card>
     </Layout>
   )
 }
 
-export default AboutPage
+export default PostPage

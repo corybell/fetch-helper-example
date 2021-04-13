@@ -39,12 +39,13 @@ const IndexPage = () => {
     <Layout>
       <Helmet title="GET" />
       <Card>
+        <h1>GET Example</h1>
         <span>
           This page uses the 'get' function to fetch a list of Studio Ghibli films.
         </span>
       </Card>
       <Card>
-        <Title>Studio Ghibli Films</Title>
+        <h2>Studio Ghibli Films</h2>
         <table>
           <thead>
             <tr>
