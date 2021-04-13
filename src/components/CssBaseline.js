@@ -18,6 +18,7 @@ const siteStyles = `
     min-height: 100%;
     width: 100%;
     background-color: #eaeaea;
+    padding-bottom: 2rem;
   }
 
   /* HTML elements */
@@ -181,6 +182,7 @@ const siteStyles = `
 
   table thead tr th {
     border-bottom: 1px solid ${color.accent};
+    text-align: left;
   }
 
   small {
